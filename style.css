@@ -1,0 +1,110 @@
+:root {
+  --bg-color: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+  font-size: 62.5%;
+  --primary-color: hsl(240, 27%, 28%);
+  --input-color: hsl(212, 23%, 89%);
+  --button-color: #7879F1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+body, button, input {
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  background: #FFFFFF;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  border-radius: .6rem;
+  width: min(42.8rem, 90%);
+  margin-top: -12rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* ----------SCREEN 1-------------- */
+
+h1 {
+  margin-bottom: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--primary-color);
+  opacity: 0.8;
+  margin-bottom: 4.8rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input, button {
+  height:5.3rem;
+  border:none;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.1rem;
+  padding: 1.6rem;
+}
+
+input {
+  width: 4.3rem;
+  background-color: var(--input-color);
+  border-radius: .4rem 0 0 .4rem;
+  color: var(--primary-color);
+}
+
+input:focus {
+  outline: 1px solid var(--button-color);
+}
+
+button {
+  background-color: var(--button-color);
+  color: white;
+  font-weight: 700;
+  border-radius: 0 .4rem .4rem 0;
+  transition: .2s;
+}
+
+button:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+/* ----------SCREEN 2-------------- */
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 150%;
+  color: var(--primary-color);
+  margin-bottom: 3.3rem;
+}
+
+.screen2 button {
+  border-radius: .4rem;
+}
+
+
