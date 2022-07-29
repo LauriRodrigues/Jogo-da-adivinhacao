@@ -1,30 +1,41 @@
 const randomNumber = Math.round(Math.random() * 10)
-console.log(randomNumber)
+const buttonSubmit = document.querySelector('#submit')
+const buttonReset = document.querySelector('#reset')
+const screen1 = document.querySelector(".screen1")
+const screen2 = document.querySelector(".screen2")
 let xAttempts = 1
 
-const button = document.querySelector('#submit')
-
-button.addEventListener('click', function handleClick(event) {
+function handleSubmitClick(event) {
   event.preventDefault()
   
   const inputNumber = document.querySelector("#inputNumber")
 
   if(Number(inputNumber.value) == randomNumber) {
-    document.querySelector(".screen1").classList.add("hide")
-    document.querySelector(".screen2").classList.remove("hide")
+    toggleScreen()
 
     if(xAttempts == 1) {
       document.querySelector('h2').innerText = `Acertou em 1 tentativa!`
     } else
       document.querySelector('h2').innerText = `Acertou em ${xAttempts} tentativas!`
-   
   }
 
+  inputNumber.value = ""
   xAttempts++
 
-})
+}
 
+function handleResetClick() {
+    toggleScreen()
+    xAttempts = 1 
+}
 
+function toggleScreen() {
+  screen1.classList.toggle("hide")
+  screen2.classList.toggle("hide")
+}
 
+buttonSubmit.addEventListener('click', handleSubmitClick)
+buttonReset.addEventListener('click', handleResetClick)
 
+console.log(randomNumber)
 

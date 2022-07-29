@@ -70,7 +70,7 @@ input, button {
 }
 
 input {
-  width: 4.3rem;
+  width: 5rem;
   background-color: var(--input-color);
   border-radius: .4rem 0 0 .4rem;
   color: var(--primary-color);
