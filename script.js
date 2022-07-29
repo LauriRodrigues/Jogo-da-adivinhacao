@@ -1,4 +1,4 @@
-const randomNumber = Math.round(Math.random() * 10)
+let randomNumber = Math.round(Math.random() * 10)
 const buttonSubmit = document.querySelector('#submit')
 const buttonReset = document.querySelector('#reset')
 const screen1 = document.querySelector(".screen1")
@@ -25,6 +25,7 @@ function handleSubmitClick(event) {
 }
 
 function handleResetClick() {
+    randomNumber = Math.round(Math.random() * 10)
     toggleScreen()
     xAttempts = 1 
 }
@@ -36,6 +37,3 @@ function toggleScreen() {
 
 buttonSubmit.addEventListener('click', handleSubmitClick)
 buttonReset.addEventListener('click', handleResetClick)
-
-console.log(randomNumber)
-
